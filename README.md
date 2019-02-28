@@ -83,7 +83,7 @@ Run using:
  
 ^in other methods use this.setState({props},callback)
 
-     ```javascript 
+```javascript 
 	    render(){
 	        console.log('rendering both clocks')
 		return <div>
@@ -91,6 +91,6 @@ Run using:
 			<DigitalDisplay time={this.state.currentTime}/>
 		       </div>
 	    }
-     ```
+```
 ^use this.state just like the props object
 
