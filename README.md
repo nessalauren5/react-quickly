@@ -37,13 +37,12 @@ Run using:
     	
 3. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
 
-       ```console
-            ./node_modules/.bin/babel ./jsx/* --out-dir ./js
-       ```
+      ```console
+       ./node_modules/.bin/babel ./jsx/* --out-dir ./js
+      ```
        
 4. Leverage properties inside components for custom behavior
-        
-        ```javascript
+     ```javascript
 	   render(){
     	let input 
     	if(this.props.type="Radio")
@@ -53,43 +52,45 @@ Run using:
     		
     	return <div> {input} </div>
         }
-	```
+     ```
     
 5. Leverage state inside components for dynamic behavior
     
-        ```javascript
+     ```javascript
 	    class Clock extends React.Component{
 	    
 	       constructor(props){
-		super(props)
-		this.launchClock()
-		this.state={currentTime:(new Date()).toLocaleString()}
+		   super(props)
+		   this.launchClock()
+		   this.state={
+		       currentTime:(new Date()).toLocaleString()
+		       }
 	       }
-	       ```
+     ```
+     
 ^ only use this.state in constructor
 
-	   ```javascript 
-	   /* method to update clock*/
-               
-	       launchClock(){
+     ```javascript 
+	    launchClock(){
 	           setInterval(() => {
-		   console.log('updating the time.')
-		   this.setState({ 
-			currentTime : (new Date()).toLocaleString()
-		   })
-	    },1000)
-        }```
+		       console.log('updating the time.')
+		       this.setState({ 
+		       currentTime : (new Date()).toLocaleString()
+		       })
+	           },1000)
+            }
+     ```
+ 
 ^in other methods use this.setState({props},callback)
 
-	    ```javascript 
+     ```javascript 
 	    render(){
-	    console.log('rendering both clocks')
+	        console.log('rendering both clocks')
 		return <div>
 			<AnalogDisplay time={this.state.currentTime}/>
 			<DigitalDisplay time={this.state.currentTime}/>
-		</div>
-	   }
-       }
-       ```
+		       </div>
+	    }
+     ```
 ^use this.state just like the props object
 
