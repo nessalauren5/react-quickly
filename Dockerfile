@@ -17,7 +17,7 @@ COPY . .
 RUN npm i --save-dev babel-cli babel-preset-react
 
 #run transpiler against all jsx files
-RUN ./node_modules/.bin/babel ./jsx/* -d ./js/
+RUN ./node_modules/.bin/babel -w ./jsx/* --out-dir ./js
 
 #install http server
 RUN npm i http-server -g
