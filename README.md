@@ -19,14 +19,17 @@ Run using:
 ##What I've learned
 
 1. creating React components using 
+
     ReactDOM.createElement('NAME',{properties})
 2. Using JSX to create components using HTML like shorthand
+
     <HelloWorld />
-    	<Outer>
+    <Outer>
     		<Inner/>
     	</Outer>
-3. Transpiling JSX using Babel CLI
-  *transpiles all jsx to individual js files*
+    	
+3. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
+
     ./node_modules/.bin/babel ./jsx/* --out-dir ./js
 
 4. Leverage properties inside components for custom behavior
@@ -41,6 +44,7 @@ Run using:
     }
     
 5. Leverage state inside components for dynamic behavior
+    
     class Clock extends React.Component{
 	constructor(props){
 		super(props)
