@@ -2,7 +2,9 @@
 
 
 Dockerized React Examples from React Quickly
+
 **teaching myself react in 30 days**
+
 Build docker image using: 
 
 
