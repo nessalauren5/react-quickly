@@ -28,12 +28,12 @@ Run using:
     
 2. Using JSX to create components using HTML like shorthand
 
-      ```HTML
-            <HelloWorld />
-            <Outer>
-    		 <Inner/>
-    	    </Outer>
-       ```
+```HTML
+    <HelloWorld />
+    <Outer>
+    	<Inner/>
+    </Outer>
+```
     	
 3. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
 
