@@ -56,7 +56,7 @@ Run using:
     
 5. Leverage state inside components for dynamic behavior
     
-     ```javascript
+```javascript
 	    class Clock extends React.Component{
 	    
 	       constructor(props){
@@ -66,11 +66,11 @@ Run using:
 		       currentTime:(new Date()).toLocaleString()
 		       }
 	       }
-     ```
+```
      
 ^ only use this.state in constructor
 
-     ```javascript 
+```javascript 
 	    launchClock(){
 	           setInterval(() => {
 		       console.log('updating the time.')
@@ -79,7 +79,7 @@ Run using:
 		       })
 	           },1000)
             }
-     ```
+```
  
 ^in other methods use this.setState({props},callback)
 
