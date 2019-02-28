@@ -1,0 +1,64 @@
+<html>
+<head><title>React Hello World</title></head>
+
+<body>
+<div id="content"></div>
+<div id='url-content'></div> </body>
+<script src="react.js"></script>
+<script src="react-dom.js"></script>
+<script src="first.js"></script>
+<!--script>
+
+//single element render
+let h1 = React.createElement('h1',null,'Hello World!')
+ReactDOM.render(
+	React.createElement('div',null,h1,h1),
+	document.getElementById('content')
+)
+</script-->
+<script>
+//component rendering
+//hello world text
+
+let h1 = React.createElement('h1',null,'Hello World!')
+let a1 = React.createElement('a',{href:'http://github.com/nessalauren5'})
+
+//resusable class that creates a div with two h1 elements
+class HelloWorld extends React.Component {
+   render() {
+	   return React.createElement('h1',this.props,'Hello ' + this.props.frameworkName + 'World!!')
+   }
+
+}
+
+class LinkItem extends React.Component{
+	render(){
+		return <a href='{this.props.url}'  title='{this.props.title}'>{this.props.label}</a>
+	}
+}
+/*instruct react dom to render a new HelloWorld element
+ReactDOM.render(
+	React.createElement(
+	'div',
+	null,
+	React.createElement(HelloWorld,null),
+	React.createElement(HelloWorld,null)),
+	document.getElementById('content')
+)*/
+//pass in immutable properties object to add unique rendering to a component
+ReactDOM.render(
+	React.createElement(
+	'div',
+	null,
+	React.createElement(HelloWorld,{id:'ember',frameworkName:'EmberJS',title:'Ember Js is for blah'}),
+	React.createElement(HelloWorld,{id:'backbone',frameworkName:'Backbone',title:'Backbone Js is for blah'})),
+	document.getElementById('content')
+)
+
+ReactDOM.render(
+	React.createElement(LinkItem,{url:"https://www.google.com",title:"Take Me to Google",label:"Click Me!"}),
+	document.getElementById('url-content')
+)
+
+</script>
+</html>
