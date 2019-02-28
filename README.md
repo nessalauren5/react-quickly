@@ -100,3 +100,8 @@ Run using:
 ```
 ^use this.state just like the props object
 
+## Up Next:
+* React Lifecycles
+    - Mounting, Updates, UnMounting
+* Implementing Events
+
