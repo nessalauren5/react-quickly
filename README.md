@@ -1,5 +1,5 @@
 # react-quickly
-
+**teaching myself react in 30 days**
 Dockerized React Examples from React Quickly
 
 Build docker image using: 
