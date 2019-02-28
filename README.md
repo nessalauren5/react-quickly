@@ -5,6 +5,9 @@ Dockerized React Examples from React Quickly
 
 *teaching myself react in 30 days*
 
+## Running with Docker
+*requires Docker to be installed on your local machine)*
+
 Build docker image using: 
 
     docker build -t react-examples .
@@ -16,7 +19,7 @@ Run using:
 * can use any name, not just react-examples
 * running the container will output the IP:PORT where the react page can be seen
 
-##What I've learned
+## What I've learned
 
 1. creating React components using 
 
@@ -25,18 +28,23 @@ Run using:
     
 2. Using JSX to create components using HTML like shorthand
 
-       <HelloWorld />
-        <Outer>
-    		<Inner/>
-    	</Outer>
+      ```HTML
+            <HelloWorld />
+            <Outer>
+    		 <Inner/>
+    	    </Outer>
+       ```
     	
 3. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
 
-       ./node_modules/.bin/babel ./jsx/* --out-dir ./js
-
+       ```console
+            ./node_modules/.bin/babel ./jsx/* --out-dir ./js
+       ```
+       
 4. Leverage properties inside components for custom behavior
         
-        render(){
+        ```javascript
+	   render(){
     	let input 
     	if(this.props.type="Radio")
     		input = <Radio/>
@@ -45,24 +53,35 @@ Run using:
     		
     	return <div> {input} </div>
         }
+	```
     
 5. Leverage state inside components for dynamic behavior
     
-        class Clock extends React.Component{
-	    constructor(props){
+        ```javascript
+	    class Clock extends React.Component{
+	    
+	       constructor(props){
 		super(props)
 		this.launchClock()
 		this.state={currentTime:(new Date()).toLocaleString()}
-	    }
+	       }
+	       ```
+^ only use this.state in constructor
+
+	   ```javascript 
 	   /* method to update clock*/
-        launchClock(){
-	    setInterval(() => {
-		console.log('updating the time.')
-		this.setState({ 
+               
+	       launchClock(){
+	           setInterval(() => {
+		   console.log('updating the time.')
+		   this.setState({ 
 			currentTime : (new Date()).toLocaleString()
-		})
+		   })
 	    },1000)
-        }
+        }```
+^in other methods use this.setState({props},callback)
+
+	    ```javascript 
 	    render(){
 	    console.log('rendering both clocks')
 		return <div>
@@ -71,4 +90,6 @@ Run using:
 		</div>
 	   }
        }
+       ```
+^use this.state just like the props object
 
