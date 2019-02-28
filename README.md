@@ -20,12 +20,18 @@ Run using:
 * running the container will output the IP:PORT where the react page can be seen
 
 ## What I've learned
+1. Define components by extending React.Component
+```js
+	class CustomComponent extends React.Component{
+		render(){
+			return ReactDOM.createElement('NAME',{properties})
+		}
+	}
+```
+^ all components must define the render() method
 
-1. creating React components using 
+^ ReactDom.createElement() actually generates the html for the component and attaches it to the DOM if necessary, remember React will only update exactly what changes.
 
-       ReactDOM.createElement('NAME',{properties})
-    
-    
 2. Using JSX to create components using HTML like shorthand
 
 ```HTML
