@@ -40,14 +40,22 @@ Run using:
     	<Inner/>
     </Outer>
 ```
-    	
-3. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
+3. Use ReactDom's render method to invoke the update to the DOM
+
+```javascript
+    ReactDOM.render(
+	<Clock />,
+	document.getElementById('clock-content')
+)
+```
+
+4. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
 
       ```console
        ./node_modules/.bin/babel ./jsx/* --out-dir ./js
       ```
        
-4. Leverage properties inside components for custom behavior
+5. Leverage properties inside components for custom behavior
 ```js
 	   render(){
     	    let input 
@@ -60,7 +68,7 @@ Run using:
        }
 ```
     
-5. Leverage state inside components for dynamic behavior
+6. Leverage state inside components for dynamic behavior
     
 ```javascript
 	    class Clock extends React.Component{
