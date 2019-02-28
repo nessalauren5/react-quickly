@@ -20,20 +20,23 @@ Run using:
 
 1. creating React components using 
 
-    ReactDOM.createElement('NAME',{properties})
+       ReactDOM.createElement('NAME',{properties})
+    
+    
 2. Using JSX to create components using HTML like shorthand
 
-    <HelloWorld />
-    <Outer>
+       <HelloWorld />
+        <Outer>
     		<Inner/>
     	</Outer>
     	
 3. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
 
-    ./node_modules/.bin/babel ./jsx/* --out-dir ./js
+       ./node_modules/.bin/babel ./jsx/* --out-dir ./js
 
 4. Leverage properties inside components for custom behavior
-    render(){
+        
+        render(){
     	let input 
     	if(this.props.type="Radio")
     		input = <Radio/>
@@ -41,32 +44,31 @@ Run using:
     		input = <Checkbox/>
     		
     	return <div> {input} </div>
-    }
+        }
     
 5. Leverage state inside components for dynamic behavior
     
-    class Clock extends React.Component{
-	constructor(props){
+        class Clock extends React.Component{
+	    constructor(props){
 		super(props)
 		this.launchClock()
 		this.state={currentTime:(new Date()).toLocaleString()}
-		
-	}
-	/* method to update clock*/
-    launchClock(){
-	setInterval(() => {
+	    }
+	   /* method to update clock*/
+        launchClock(){
+	    setInterval(() => {
 		console.log('updating the time.')
 		this.setState({ 
 			currentTime : (new Date()).toLocaleString()
 		})
-	},1000)
-    }
-	render(){
+	    },1000)
+        }
+	    render(){
 	    console.log('rendering both clocks')
 		return <div>
 			<AnalogDisplay time={this.state.currentTime}/>
 			<DigitalDisplay time={this.state.currentTime}/>
 		</div>
-	}
-}
+	   }
+       }
 
