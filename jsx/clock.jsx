@@ -15,8 +15,11 @@ launchClock(){
 	},1000)
 }
 	render(){
-	    console.log('rendering clock')
-		return <div>{this.state.currentTime}</div>
+	    console.log('rendering both clocks')
+		return <div>
+			<AnalogDisplay time={this.state.currentTime}/>
+			<DigitalDisplay time={this.state.currentTime}/>
+		</div>
 	}
 }
 

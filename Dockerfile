@@ -20,7 +20,7 @@ RUN npm i --save-dev babel-cli babel-preset-react
 RUN ./node_modules/.bin/babel ./jsx/* --out-dir ./js
 
 #install http server
-RUN npm i http-server -g
+RUN npm i http-server -g -c-1
 
 #open port 8080 for testing
 EXPOSE 8080
