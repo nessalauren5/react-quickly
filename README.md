@@ -42,17 +42,17 @@ Run using:
       ```
        
 4. Leverage properties inside components for custom behavior
-     ```javascript
+```js
 	   render(){
-    	let input 
-    	if(this.props.type="Radio")
-    		input = <Radio/>
-    	else
-    		input = <Checkbox/>
+    	    let input 
+    	    if(this.props.type="Radio")
+    		    input = <Radio/>
+    	    else
+    		    input = <Checkbox/>
     		
-    	return <div> {input} </div>
-        }
-     ```
+    	    return <div> {input} </div>
+       }
+```
     
 5. Leverage state inside components for dynamic behavior
     
