@@ -113,6 +113,7 @@ ReactDOM.render(
 	    }
 ```
 ^use this.state just like the props object
+
 7. React Lifecycles
 
 ### Mounting 
