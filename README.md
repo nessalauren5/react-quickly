@@ -113,9 +113,43 @@ ReactDOM.render(
 	    }
 ```
 ^use this.state just like the props object
+7. React Lifecycles
 
+### Mounting 
+* constructor() - used for setting the initial state of a component, always called first before mounting to DOM
+* componentWillMount() - invoked only once just before initial rendering
+* render() - paints the DOM with this component
+* componentDidMount() - invoked only once in browser, not on server. great place for XHR requests
+
+### Updating
+* componentWillReceiveProps() - called when props are sent to the component, React has no way of knowing if they are diff props from before
+* shouldComponentUpdate() - method for optimization to prevent unneccessary re-rendering of components
+* componentWillUpdate() - called before a component renders
+* render() - rerender changes brought to this component
+* componentDidUpdate() - called after a component has been re-rendered
+
+### Unmounting
+* componentWillUnMount() - used for cleanup to avoid memory leaks. Great place to remove event listeners
+
+8. Implementing Events
+
+```javascript
+
+confirmLeave(){
+	//method to confirm user wants to navigate to another page
+}
+
+componentDidMount(){
+	//attached listener
+	window.addEventListener('beforeunload',this.confirmLeave)
+}
+
+componentWillUnMount(){
+	//detach listener
+	window.removeEventListener('beforeunload',this.confirmLeave)
+}
+```
 ## Up Next:
-* React Lifecycles
-    - Mounting, Updates, UnMounting
-* Implementing Events
+* Handeling Events
+
 
