@@ -47,6 +47,12 @@ Run using:
 	<Clock />,
 	document.getElementById('clock-content')
 )
+// or 
+
+ReactDOM.render(
+	React.createElement(Clock,null),
+	document.getElementById('id')
+)
 ```
 
 4. Transpiling JSX using Babel CLI (*transpiles all jsx to individual js files*)
