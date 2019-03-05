@@ -7,9 +7,10 @@
 <div id='clock-content'></div> </body>
 <script src="js/react.js"></script>
 <script src="js/react-dom.js"></script>
-<script src="js/jsx/analog.js"></script>
+<!--script src="js/jsx/analog.js"></script>
 <script src="js/jsx/digital.js"></script>
-<script src="js/jsx/clock.js"></script>
+<script src="js/jsx/clock.js"></script-->
+<script src="js/jsx/forms.js"></script>
 <!--script>
 
 //single element render
@@ -19,10 +20,11 @@ ReactDOM.render(
 	document.getElementById('content')
 )
 </script-->
-<script>
+<!--script>
 //component rendering
-//hello world text
 
+//hello world text
+let consttemp = React.createElement(Component,null,'Hello World!')
 let h1 = React.createElement('h1',null,'Hello World!')
 let a1 = React.createElement('a',{href:'http://github.com/nessalauren5'})
 
@@ -52,5 +54,5 @@ ReactDOM.render(
 	React.createElement(HelloWorld,{id:'backbone',frameworkName:'Backbone',title:'Backbone Js is for blah'})),
 	document.getElementById('content')
 )
-</script>
+</script-->
 </html>
