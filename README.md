@@ -155,7 +155,9 @@ componentWillUnMount(){
 	 <input type="text" ... onChange={this.handleChange.bind(this)} 
 ```
 ^event handlers can be passed to a component through props
+
 ^attach .bind(this) when the handler will operate on class attributes (like state)
+
 ```javascript
 class TextInput extends React.Component{
     constructor(props){
@@ -171,8 +173,9 @@ class TextInput extends React.Component{
         this.setState({text:event.target.value})
     }
 ```
+
 ^ event handlers should operate on state attributes (mutable)
-^ 
+
 ```javascript
     render(){
         return <div>
@@ -185,6 +188,7 @@ class TextInput extends React.Component{
 }
 ```
 ^example renders a form with handlers bound to form onSubmit and input onChange and onkeyUp
+
 10 High Order Components
 *HOC give you the ability to extend and enhance a components functionality.*
 
