@@ -191,7 +191,17 @@ class TextInput extends React.Component{
 
 10 High Order Components
 *HOC give you the ability to extend and enhance a components functionality.*
-
+* Define HOCs using the fat arrow notation ()=>{}
+```javascript
+	const LoadWebsite = (Component)=> {}
+```
+Use the HOC to enhance components with additional functionality
+Script below allows you to render a website by using 3 diff components
+```javascript
+	const EnhancedButton = LoadWebsite(Button)
+	const EnhancedLink = LoadWebsite(Link)
+	const EnhancedLogo = LoadWebsite(Logo)
+```
 ## Up Next:
 * Forms
 
