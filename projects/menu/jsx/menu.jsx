@@ -22,15 +22,14 @@ class Menu extends React.Component{
     render(){
         let menus = this.state.data_items
 
-        return <div>
+        return <div className="collapse navbar-collapse" id="navbarNav">
+            <div className="navbar-nav">
             {
                 menus.map((v,i) => {
-                return React.createElement('div',
-                    {key: i},
-                    <Link label={v}/>)
+                return <Link label={v} className="nav-item nav-link"/>
+                })
             }
-            )
-            }
+            </div>
         </div>
 
     }
@@ -44,12 +43,10 @@ class Link extends React.Component{
             .trim()
             .replace(' ','')
         console.log('creating link: ' + url)
-        return (<div>
-            <a href={url} >
+
+        return (<a className={this.props.className} href={url} >
                 {this.props.label}
-            </a>
-                <br />
-            </div>
+                </a>
         )
     }
 }
