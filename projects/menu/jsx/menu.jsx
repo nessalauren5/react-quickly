@@ -7,15 +7,14 @@ class Menu extends React.Component{
             'Services',
             'Portfolio',
             'Contact Us']//this.props.menus
-        return React.createElement('div',
-            null,
-            menus.map((v,i) => {
+        return <div>
+            {menus.map((v,i) => {
                 return React.createElement('div',
                     {key: i},
-                    React.createElement(Link,{label: v})
-                )
-            })
-        )
+                    <Link label={v}/>)
+            })}
+        </div>
+
     }
 }
 class Link extends React.Component{
@@ -26,14 +25,12 @@ class Link extends React.Component{
             .trim()
             .replace(' ','')
         console.log('creating link: ' + url)
-        return React.createElement('div',
-            null,
-            React.createElement(
-                'a',
-                {href: url},
-                this.props.label
-            ),
-            React.createElement('br')
+        return (<div>
+            <a href={url} >
+                {this.props.label}
+            </a>
+                <br />
+            </div>
         )
     }
 }
@@ -41,8 +38,6 @@ class Link extends React.Component{
 
 
 ReactDOM.render(
-    React.createElement(Menu,
-        null
-    ),
+    <Menu/>,
     document.getElementById('menu')
 )
