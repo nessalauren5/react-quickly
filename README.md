@@ -7,11 +7,22 @@ Dockerized React Examples from React Quickly
 
 ## Running with Docker
 *requires Docker to be installed on your local machine)*
+
 Update Dockerfile to point to desired project
-    COPY -/projects/menu- .
+Replace this line 
+
+```Dockerfile
     COPY /projects/webpack .
-	
-Build docker image using: 
+ ```	
+ 
+ with this one to switch from running the webpack project to the menu projec
+ 
+ 
+ ```Dockerfile
+    COPY /projects/menu .
+ ```
+    
+While in the location of the Dockerfile on cmd line, build docker image using: 
 
     docker build -t react-examples .
 
