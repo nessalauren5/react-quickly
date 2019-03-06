@@ -32,5 +32,6 @@
     }
 }
 ```
-## Up Next 
-    * Webpack usages in complex projects
+## Up Next:
+[Hot Module Reloading](../hotmodule)
+   
