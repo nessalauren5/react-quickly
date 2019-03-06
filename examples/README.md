@@ -16,7 +16,7 @@
 ```js
 	class CustomComponent extends React.Component{
 		render(){
-			return ReactDOM.createElement('NAME',{properties})
+			return ReactDOM.createElement(NAME,{properties})
 		}
 	}
 ```
