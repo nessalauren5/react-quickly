@@ -16,9 +16,9 @@ COPY ./projects/webpack .
 #COPY ./projects/menu .
 
 #install babel transpiler
-RUN npm i --save-dev babel-cli babel-preset-react
+RUN npm i --save-dev react react-dom babel-cli babel-core babel-preset-react babel-loader webpack css-loader style-loader
 #run transpiler against all jsx files
-RUN npm run-script jsx
+RUN npm run-script build
 
 #install http server
 RUN npm i http-server -g -c-1
