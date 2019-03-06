@@ -12,7 +12,8 @@
 	
 ## What I learned
 1. Webpack configuration through webpack.config.js 
-   1. Can have multiple for diff environments, i.e. webpack.dev.config.js
+   1. Can have multiple for diff environments, i.e. *webpack.dev.config.js*
+   1. *entry*: designates a start point for bundle, typically main file which loads other reqs
 ```javascript
 	module.exports = {
     		entry: './jsx/app.jsx',
