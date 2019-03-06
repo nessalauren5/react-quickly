@@ -1,0 +1,13 @@
+{
+  "name": "react-quickly-examples",
+  "version": "1.0.0",
+  "main": "menu.jsx",
+  "scripts" : {"jsx":"./node_modules/.bin/babel ./jsx/* --out-dir ./js"},
+  "babel": {
+    "presets": ["react"]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
