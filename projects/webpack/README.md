@@ -1,7 +1,7 @@
 ## Running on Docker
 1. Update the Dockerfile COPY line to point to /examples
 	```Dockerfile
-		COPY /projects/webpack .
+	COPY /projects/webpack .
 	```
 2. Check console to find IP or access using localhost:8080 in the browser
 	```console
