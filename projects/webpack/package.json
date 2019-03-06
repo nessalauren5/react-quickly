@@ -1,8 +1,8 @@
 {
-  "name": "menu-jsx",
+  "name": "webpack-jsx",
   "version": "1.0.0",
-  "main": "menu.jsx",
-  "scripts" : {"jsx":"./node_modules/.bin/babel ./jsx -o /js"},
+  "main": "component.jsx",
+  "scripts" : {"jsx":"./node_modules/.bin/babel ./jsx/* --out-dir ./js"},
   "babel": {
     "presets": ["react"]
   },

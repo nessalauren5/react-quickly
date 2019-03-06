@@ -11,12 +11,14 @@ RUN mkdir /public
 WORKDIR /public
 
 #copy all artifacts into image
-COPY ./projects/menu .
+#change source to run different projects
+COPY ./projects/webpack .
+#COPY ./projects/menu .
 
 #install babel transpiler
 RUN npm i --save-dev babel-cli babel-preset-react
 #run transpiler against all jsx files
-RUN ./node_modules/.bin/babel ./jsx/* --out-dir ./js
+RUN npm run-script jsx
 
 #install http server
 RUN npm i http-server -g -c-1
