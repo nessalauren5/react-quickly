@@ -182,4 +182,4 @@ Script below allows you to render a website by using 3 diff components
 	const EnhancedLogo = LoadWebsite(Logo)
 ```
 ## Up Next:
-* /projects/menu
+[Menu Component Project](../projects/menu)
