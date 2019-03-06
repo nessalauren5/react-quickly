@@ -1,4 +1,4 @@
-## What I've learned
+## Summary of Concepts
 
 1. Load dynamic menu options from external source 
     1. menuOptions are a const with preloaded defaults

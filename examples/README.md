@@ -11,7 +11,7 @@
 	http://172.17.0.2:8080
 	```
 
-## What I've learned
+## Summary of Concepts
 1. Define components by extending React.Component
 ```js
 	class CustomComponent extends React.Component{

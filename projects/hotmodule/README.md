@@ -10,7 +10,7 @@
 	http://127.0.0.1:8080
 	http://172.17.0.2:8080
 	
-## What I learned
+## Summary of Concepts
 1. Webpack configuration through webpack.config.js 
    1. Can have multiple for diff environments, i.e. *webpack.dev.config.js*
    1. *entry*: designates a start point for bundle, typically main file which loads other reqs

@@ -10,7 +10,7 @@
 	http://127.0.0.1:8080
 	http://172.17.0.2:8080
 	
-## What I learned
+## Summary of Concepts
 1. Webpack configuration through webpack.config.js 
    1. Can have multiple for diff environments, i.e. *webpack.dev.config.js*
    1. *entry*: designates a start point for bundle, typically main file which loads other reqs
@@ -32,5 +32,26 @@
     }
 }
 ```
+1. using app.js to load your dependencies 
+   1. //import css which will be imported&injected by loaders
+   
+        ```javascript
+      require('../css/main.css')
+        ```
+        
+   1. Store react and reactDOM in global constants
+   (*can do the same for any other components needed*)
+        
+        ```javascript
+        const React = require('react')
+        const ReactDOM = require('react-dom')
+        const Content = require('./content.jsx')
+         ```
+              
+   1. Replace all .js imports with a single import:
+        ```hmtl
+        <script src="js/bundle.js"></script>
+        ```
+        
 ## Up Next 
     * Webpack usages in complex projects
